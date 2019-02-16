@@ -1,0 +1,11 @@
+<!--components/cellBox/cellBox.wxml-->
+<view data-name="{{ innerData.name }}" class='cell-box-outer' hover-class="cell-enter" bindtap='_changeTo'>
+  <view class='cell-box-inner'>
+
+    <view class='cell-img-wrap'>
+      <image lazy-load='{{ true }}' class='cell-img' src='{{ innerData.imgSrc }}'></image>
+    </view>
+    <text class='cell-title'>{{ innerData.title }}</text>
+    
+  </view>
+</view>

@@ -1,0 +1,68 @@
+<!--pages/me/me.wxml-->
+<view class='my-info'>
+   <view class='divider'></view>
+   <view class='cell'>
+      <view class='cell-me'>
+        <image src='{{attr}}' bindtap='selesctImg'></image>
+      </view>
+      <view class='cell-info'>
+        <text class='title cap'>昵称：</text>
+        <text class='ft'>小米账号：1781052210</text>
+      </view>
+      <view class='cell-code'>
+        <image src='/pages/img/二维码.png'></image>
+      </view>
+  </view>
+   <view class='divider'></view>
+    <view class='card'>
+       <view class='card-me'>
+        <image src='/pages/img/钱袋.png'></image>
+      </view>
+      <view class='card-info'>
+        <text class='title cap'>小米精品推荐</text>
+        <text class='neicei'>(内侧)</text>
+      </view>
+    </view>
+    <view class='divider'></view>
+    <view class='card'>
+       <view class='card-me'>
+        <image src='/pages/img/订单.png'></image>
+      </view>
+      <view class='card-info'>
+        <text class='title cap'>我的订单</text>
+      </view>
+    </view>
+    <view class='card'>
+       <view class='card-me'>
+        <image src='/pages/img/会员.png'></image>
+      </view>
+      <view class='card-info'>
+        <text class='title cap'>会员中心</text>
+      </view>
+    </view>
+    <view class='card'>
+       <view class='card-me'>
+        <image src='/pages/img/优惠券.png'></image>
+      </view>
+      <view class='card-info'>
+        <text class='title cap'>我的优惠券</text>
+      </view>
+    </view>
+    <view class='card'>
+       <view class='card-me'>
+        <image src='/pages/img/F码.png'></image>
+      </view>
+      <view class='card-info'>
+        <text class='title cap'>我的F码</text>
+      </view>
+    </view>
+    <view class='divider'></view>
+    <view class='card'>
+      <view class='card-me'>
+      <image src='/pages/img/设置.png'></image>
+    </view>
+    <view class='card-info'>
+      <text class='title cap'>设置</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,98 @@
+<view class='app-home'>
+  <!-- 搜索框 -->
+  <view class='search-big'>
+      <view class='search'>
+        <icon class="searchcion" size='12' type='search'></icon>  
+        <input type="text" placeholder="搜索商品" value=""/>  
+      </view>
+  </view>  
+  <!-- 通告栏 -->
+  <i-notice-bar icon="systemprompt" closable loop='true'>
+    永远相信美好的事情即将发生!
+  </i-notice-bar>
+  <!-- 轮播图 -->
+  <view class='slider'>
+    <swiper autoplay='10' indicator-dots="true" indicator-color="#E3E3E3" indicator-active-color=" 	#FFFFFF">
+      <swiper-item wx:for="{{list}}" wx:key="index">
+        <image src="{{item.img_url}}" lazy-load mode="aspectFill" ></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!--导航-->
+  <view class='nav-list'>
+    <view class='nav-item' wx:for="{{navList}}" wx:key="index">
+      <image src='{{item.img_url}}' mode="aspectFit"></image>
+      <text>{{item.nav_name}}</text>
+    </view>
+  </view>
+  <!-- 灰色分割块 -->
+  <view class='divider'></view>
+  <!-- 商品一 -->
+  <view class='mi-list'>
+    <view class='xiaomi-list'>
+      <view class='xiaomi-item'>
+        <view class='xiaomi-play'>
+          <text class='title'>{{product_1[0].title}}</text>
+          <text class='info'>{{product_1[0].info}}</text>
+        </view>
+        <view class='play-img'>
+          <image src='{{product_1[0].img_url}}'></image>
+        </view>
+      </view>
+      <view class='mi-item'>
+        <view class='mi-item-box bt'>
+          <view class='xiaomi'>
+            <text class='title'>{{product_1[1].title}}</text>
+            <text class='info'>{{product_1[1].info}}</text>
+          </view>
+          <view class='mi-img'>
+            <image src='{{product_1[1].img_url}}'></image>
+          </view>
+        </view>
+         <view class='mi-item-box bb'>
+          <view class='xiaomi'>
+            <text class='title'>{{product_1[2].title}}</text>
+            <text class='info'>{{product_1[2].info}}</text>
+          </view>
+          <view class='mi-img mi2'>
+            <image src='{{product_1[2].img_url}}'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 灰色分割块 -->
+  <view class='divider'></view>
+  <view class='bg-img'>
+    <image class='bg-img' src='http://127.0.0.1:3000/img/背景图/1.jpg'></image>
+  </view>
+  <!-- 灰色分割块 -->
+  <view class='divider'></view>
+  <!-- 每日精选 -->
+  <view class='everyDay'>
+    <view class='everyTitle'>
+      <text>每日精选</text>
+    </view>
+    <view class='every_product'>
+      <view class='every-list' wx:for='{{every_day}}' wx:key='index'>
+        <view class='every-img'>
+          <image src='{{item.img_url}}'></image>
+        </view>
+        <view class='every-item'>
+          <text class='title every-title'>{{item.title}}</text>
+          <text class='info'>{{item.info}}</text>
+          <view class='every-money'>
+             <text class='every-now'>{{item.money_now}}元起</text>
+             <text class="every-over {{item.isShow?'':'active'}}" >{{item.money_list}}元起</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+   <!-- 灰色分割块 -->
+  <view class='divider'></view>
+  <view class='bg-img'>
+    <image class='bg-img' src='http://127.0.0.1:3000/img/背景图/3.jpg'></image>
+  </view>
+  <view class='divider'></view>
+</view>

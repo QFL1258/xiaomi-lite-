@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "blank-box": "../../components/blankBox/blankBox"
+  }
+}

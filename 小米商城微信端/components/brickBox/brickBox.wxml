@@ -1,0 +1,34 @@
+<!--components/brickBox/brickBox.wxml-->
+<view class='section-brick'>
+  <!--头部  -->
+  <view class='brick-header'>
+    <image lazy-load="{{isLazyLoad}}" class='brick-banner' src="{{ data.bannerSrc }}" wx:if="{{ data.isShowBanner }}"></image> 
+    <image lazy-load="{{isLazyLoad}}" class='brick-as-banner' wx:for="{{ data.asBannerSrc }}" wx:for-item="bannerItem" wx:for-index="bannerIndex" wx:key="bannerIndex" src='{{ bannerItem }}'></image>
+    <!-- <slot></slot> -->
+  </view>
+
+<!--列表  -->
+  <view class='brick-list'>
+    <!--两行列表  -->
+    <view class='brick-list-two' wx:key="listIndex" wx:for="{{ data.child }}" wx:for-item="listItem" wx:for-index="listIndex">
+      <!--列表项  -->
+      <view data-uid="{{ item.id }}" class='brick-item' wx:key="index" wx:for="{{ listItem }}" wx:for-index="index" wx:for-item="item" bindtap='_changeToDetail'>
+        <!--商品图片盒子  -->
+        <view class='item-image-wrapper'>
+          <image lazy-load="{{isLazyLoad}}" class='item-image' src='{{ item.imgSrc }}'></image>
+        </view>
+        <!--商品标题  -->
+        <view class='item-title'>{{ item.title }}</view>
+        <!--商品描述  -->
+        <view class='item-desc'>{{ item.desc }}</view>
+         <!--商品价格盒子  -->
+        <view class='item-price-wrapper'>
+          <text class='price'>{{ item.price }}</text>
+          <text class='price-del'>{{ item.price_del }}</text>
+        </view>
+      </view>
+      
+    </view>
+  </view>
+
+</view>
